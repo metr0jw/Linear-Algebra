@@ -1,4 +1,4 @@
-function [] = assign_2019202008(A, b)
+function E = assign_2019202008(A, b)
 
 % Define length of row and column for later usage
 row_len = size(A, 1);
@@ -33,7 +33,7 @@ disp(A)
 
 
 % #4 Using loop statement, calculate inner product of the input matrix.
-% Make 1*m zero vector
+% Preallocate 1*m zero vector for performance
 B = zeros(1, col_len);
 % And add the multiplications to B
 for i = 1:row_len
@@ -54,7 +54,13 @@ disp(u)
 
 % #6 Create a new vector t by dot product of matrices A and u.
 % Simple dot product of matrix A and vector u
-t = A*u;
+% if u is row vector, transpose u vector
+if size(u,1) == 1
+    u = u.';
+    t = A*u;
+else
+    t = A*u;
+end
 disp('Condition 6 : t')
 disp(t)
 
