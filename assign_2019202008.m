@@ -73,7 +73,7 @@ disp(C)
 
 
 % #8 Create a matrix D of the form m*m using inner product of vectors t and u.
-% Size of vector t is m*1, and u is m*1, so I needs to be transposed one of them
+% Size of vector t is m*1, and u is m*1, so it needs to be transposed one of them
 D = dot(t, transpose(u));       
 D = repmat(D, size(A, 1), size(A, 1));
 disp('Condition 8 : D')
