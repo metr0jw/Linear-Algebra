@@ -1,4 +1,6 @@
 function E = assign_2019202008(A, b)
+% Implementation of Linear Algebra assignments from #1 to #9
+% Comments are located at the above of the each problems
 
 % Define length of row and column for later usage
 row_len = size(A, 1);
